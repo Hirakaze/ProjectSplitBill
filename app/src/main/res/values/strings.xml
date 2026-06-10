@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="tambah_transaksi">Tambah Transaksi</string>
+    <string name="split_bill_apps">SPLIT BILL APPS</string>
+    <string name="backbutton">BackButton</string>
+    <string name="add_friend">Add Friend</string>
+</resources>
