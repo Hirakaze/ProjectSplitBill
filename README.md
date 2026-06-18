@@ -47,3 +47,23 @@ This project follows an Object-Oriented Programming (OOP) approach, separated in
 * `ui/` : Contains the main application Activities (`MainActivity`, `TambahTransaksiActivity`, `DetailTransaksiActivity`).
 * `ui/adapter/` : Contains various RecyclerView Adapters (`HistoryAdapter`, `ReceiptItemAdapter`, etc.) to manage list view UI.
 * ImageHelper : A utility class to handle image processing, including compressing the bitmap and converting the image to a Base64 string for the Gemini API request.
+
+### 2. Configure Google Gemini API Key
+
+This app securely retrieves the API Key from `BuildConfig`.
+
+1. Get a Gemini API Key from [Google AI Studio](https://aistudio.google.com/).
+2. Open the `local.properties` file located at the root of your Android Studio project.
+3. Add the following line at the bottom of the file:
+   ```properties
+   GEMINI_API_KEY=insert_your_api_key_here
+   ```
+
+### 3. Configure Firebase
+This app requires Firebase Firestore to function properly.
+
+1. Create a new project in the [Firebase Console](https://console.firebase.google.com/).
+2. Register your Android app with the Package Name `com.example.myapplication`.
+3. Download the `google-services.json` file.
+4. Move the `google-services.json` file into the `app/` directory of your Android Studio project.
+5. Enable **Cloud Firestore** in the Firebase Console and set the *Rules* (for testing purposes) to `allow read, write: if true;` *(Note: Remember to update these rules with proper authentication before pushing to production)*.
